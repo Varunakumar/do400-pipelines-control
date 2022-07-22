@@ -1,16 +1,12 @@
-peline {
+pipeline {
 
-agent {
-
-node {
-
-label 'nodejs'
-
-}
-
-}
+...output omitted...
 
 stages {
+
+stage('Run Tests') {
+
+parallel {
 
 stage('Backend Tests') {
 
@@ -35,6 +31,46 @@ sh 'node ./frontend/test.js'
 }
 
 }
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
